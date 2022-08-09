@@ -50,3 +50,48 @@ Acontinuacion, podremos visualziar las responsabiliades que cada agente puede te
 > - Los dispositivosd ya sean moviles o locales.
 > - Cuentas e identidades
 > La ventaja del modelo de responsabilidad compartida es que las organizaciones tienen claras sus responsabilidades y las del proveedor de la nube.
+
+---
+
+## Descripcion de la defensa en profundiad.
+
+La defensa en profundidad usa un enfoque por **capas** para la seguridad, en lugar de depender de un solo perímetro. **Una estrategia de defensa en profundidad usa una serie de mecanismos para ralentizar el avance de un ataque.** Cada capa proporciona protección de modo que, si se infringe una de ellas, una capa posterior impedirá que un atacante obtenga acceso no autorizado a los datos.
+
+### Niveles de Seguridad:
+
+- **La seguridad física**, como limitar el acceso a un centro de datos solo al personal autorizado.
+Controles de seguridad de identidad y acceso, como la autenticación multifactor o el acceso basado en condiciones, para controlar el acceso a la infraestructura y el control de cambios.
+
+- **La seguridad perimetral** de la red corporativa incluye la protección frente a ataques de denegación de servicio distribuido (DDoS) para filtrar los ataques a gran escala antes de que puedan causar una denegación de servicio para los usuarios.
+
+> DDoS : Es un ataque a un sistema de computadoras o red que **causa que un servicio o recurso sea inaccesible a los usuarios legítimos.** ​Es decir, una vez que una página web es atacada por este medio deja de poder acceder a sus propios datos hasta que es capaz de parar la intrusión. Para lograrlo el atacante satura el servidor en el que se aloja la página o alguno de sus servicios haciendo que dicho servidor no pueda funcionar correctamente.
+
+- **Seguridad de red**, como la segmentación de red y los controles de acceso a la red, para limitar la comunicación entre los recursos.
+
+- **Seguridad de capa de proceso**, como la protección del acceso a las máquinas virtuales, ya sea de forma local o en la nube, cerrando determinados puertos.
+
+- **Seguridad de capa de aplicación**, que garantiza que las aplicaciones sean seguras y estén libres de vulnerabilidades de seguridad.
+
+- **Seguridad de capa de datos** que incluye controles para administrar el acceso a los datos empresariales y de clientes, y el cifrado para proteger los datos.
+
+![Capas](https://docs.microsoft.com/es-mx/learn/wwl-sci/describe-security-concepts-methodologies/media/4-defense-depth.png)
+
+---
+
+## CIA (Confidencialidad, Integridad y Disponibilidad)
+
+Como ya hemops visto, la ciberseguridad esta con la finalidad de proteger y defender el uso correcto del **ciber Espacio** de todo tipo de ataques, y que **una estrategia de defensa en profundidad** usa una serie de mecanismos para ralentizar el avance de un ataque. Aqui entra el triangulo de la ciberseguridad.
+
+![CIA](https://i.stack.imgur.com/nDLPC.png)
+
+1. **La confidencialidad** se refiere a la necesidad de conservar datos confidenciales, como información de clientes, contraseñas o datos financieros. 
+
+> Puede cifrar los datos para mantener la confidencialidad, pero también debe mantener la confidencialidad de las claves de cifrado. La confidencialidad es la parte más visible de la seguridad; gracias a ella, podemos ver claramente la necesidad de mantener la confidencialidad de los datos privados, las claves, las contraseñas y otros secretos.
+
+2. **La integridad** indica la necesidad de mantener los datos o mensajes correctos. 
+
+> Cuando envíe un mensaje de correo electrónico, probablemente quiera asegurarse de que el mensaje recibido sea el mismo que el mensaje enviado. Al almacenar datos en una base de datos, quiere asegurarse también de que los datos que recupera son los mismos que los datos almacenados. El cifrado de datos hace que este proceso sea confidencial, pero debe ser capaz de descifrarlo para obtener el mismo contenido que antes del cifrado. La integridad consiste en tener la confianza de que los datos no se han alterado ni modificado.
+
+3. **La disponibilidad** se refiere a poner los datos a disposición de los usuarios cuando los necesiten. 
+
+> Es importante para la organización mantener seguros los datos de los clientes, pero al mismo tiempo también debe estar disponible para los empleados que trabajan con los clientes. Aunque puede ser más seguro almacenar los datos en un formato cifrado, los empleados necesitan obtener acceso a los datos descifrados.

@@ -139,7 +139,7 @@ Estos tres principio guian y respaldan el modo de implementar la seguridad:
 
 ---
 
-## 🙊 Cifrado y código HASH.
+## 🙊 Cifrados.
 
 **Una manera de mitigar las amenazas de ciberseguridad más comunes es cifrar datos confidenciales o valiosos.**
 
@@ -153,3 +153,33 @@ Hay dos tipos de cifrado de nivel superior:
 Cualquiera de las claves puede cifrar los datos, pero no se puede usar una sola clave para descifrar los datos cifrados. Para descifrarlos se necesita la otra clave emparejada. El cifrado asimétrico se usa para cosas como el acceso a sitios en Internet mediante el protocolo HTTPS y las soluciones de firma de datos electrónicas. El cifrado puede proteger los datos en reposo o en tránsito.
 
 ![cifrados](https://docs.microsoft.com/es-mx/learn/wwl-sci/describe-security-concepts-methodologies/media/6-encryption.png)
+
+### Cifrado de datos en reposo.
+
+Los datos en reposo **son los datos que se almacenan en un dispositivo físico, como un servidor.** Pueden estar almacenados en una base de datos o en una cuenta de almacenamiento, pero, independientemente de dónde estén almacenados, el cifrado de datos en reposo **garantiza** que los datos no se puedan leer sin las claves y los secretos necesarios para descifrarlos.
+
+> Si un atacante obtuviera una unidad de disco duro con datos cifrados, pero no tuviera acceso a las claves de cifrado, no podría leer los datos.
+
+### Cifrado de datos en tránsito.
+
+**Los datos en tránsito son los que se están moviendo de una ubicación a otra**
+
+> Por ejemplo, por Internet o a través de una red privada. La transferencia segura se puede controlar mediante varias capas diferentes. Esto se puede hacer mediante el cifrado de los datos en el nivel de aplicación antes de enviarlos a través de una red. HTTPS es un ejemplo de cifrado en tránsito.
+
+**El cifrado de datos en tránsito protege los datos de observadores externos y proporciona un mecanismo para transmitirlos que limita el riesgo de exposición.**
+
+### Cifrado de datos en uso.
+
+Un caso de uso común para el cifrado de datos en uso **conlleva proteger los datos en un almacenamiento no persistente, como la RAM o la memoria caché de CPU.** Esto se puede lograr mediante tecnologías que crean un enclave (como si fuera una caja fuerte con llave) que protege los datos y los mantiene cifrados mientras la CPU los procesa.
+ 
+ ---
+
+## Aplicacióne de algoritmos Hash.
+
+**El hash utiliza un algoritmo para convertir el texto en un valor hash de longitud fija único denominado hash.** Cada vez que se aplica un algoritmo hash al mismo texto mediante el mismo algoritmo, se genera el mismo valor hash. Ese hash se puede usar como identificador único de los datos asociados.
+
+![hash](https://criptomo.com/images/posts/201807/hashing-vs-encryption.png)
+
+> El hash es diferente del cifrado, ya que no usa claves, y el valor al que se aplica el algoritmo hash no se descifra posteriormente en el original.
+
+*El hash se usa para almacenar contraseñas*. Cuando un usuario escribe su contraseña, el mismo algoritmo que creó el hash almacenado crea un hash de la contraseña escrita. A continuación, se compara con la versión hash almacenada de la contraseña. Si coinciden, es que el usuario ha escrito correctamente la contraseña. Esto es más seguro que el almacenamiento de contraseñas de texto sin formato, pero los hackers también conocen los algoritmos hash. **Dado que las funciones hash son deterministas (esto es, la misma entrada produce el mismo resultado)**, los hackers pueden usar los ataques de **diccionario por fuerza bruta** mediante el hash de las contraseñas. Por cada hash coincidente, obtienen la contraseña real. Para reducir este riesgo, a menudo las contraseñas se "cifran con sal". Esto hace referencia a que se agrega un valor aleatorio de longitud fija a la entrada de las funciones hash para crear valores hash únicos para la misma entrada.

@@ -9,7 +9,7 @@ En este modulo, podremos entender:
 - Confianza Cero (Zero Trust).
 - Conceptos de cifrado (Hash).
 
-## Modelo de responsabilidad compartida.
+## 👉 Modelo de responsabilidad compartida.
 
 Comenzaremos sabiendo que existen organizaciones que solo ejecutan **hardware y software local**, la organización es un 100 % responsable de la implementación de la seguridad y el cumplimiento. Con los servicios basados en la nube, esa responsabilidad se comparte entre el cliente y el proveedor de la nube.
 
@@ -53,7 +53,7 @@ Acontinuacion, podremos visualziar las responsabiliades que cada agente puede te
 
 ---
 
-## Descripcion de la defensa en profundiad.
+## 🛡️ Descripcion de la defensa en profundiad.
 
 La defensa en profundidad usa un enfoque por **capas** para la seguridad, en lugar de depender de un solo perímetro. **Una estrategia de defensa en profundidad usa una serie de mecanismos para ralentizar el avance de un ataque.** Cada capa proporciona protección de modo que, si se infringe una de ellas, una capa posterior impedirá que un atacante obtenga acceso no autorizado a los datos.
 
@@ -78,7 +78,7 @@ Controles de seguridad de identidad y acceso, como la autenticación multifactor
 
 ---
 
-## CIA (Confidencialidad, Integridad y Disponibilidad)
+## 🔼 CIA (Confidencialidad, Integridad y Disponibilidad)
 
 Como ya hemops visto, la ciberseguridad esta con la finalidad de proteger y defender el uso correcto del **ciber Espacio** de todo tipo de ataques, y que **una estrategia de defensa en profundidad** usa una serie de mecanismos para ralentizar el avance de un ataque. Aqui entra el triangulo de la ciberseguridad.
 
@@ -95,3 +95,44 @@ Como ya hemops visto, la ciberseguridad esta con la finalidad de proteger y defe
 3. **La disponibilidad** se refiere a poner los datos a disposición de los usuarios cuando los necesiten. 
 
 > Es importante para la organización mantener seguros los datos de los clientes, pero al mismo tiempo también debe estar disponible para los empleados que trabajan con los clientes. Aunque puede ser más seguro almacenar los datos en un formato cifrado, los empleados necesitan obtener acceso a los datos descifrados.
+
+---
+
+## 🤔 Confianza Cero (Zero Trust)
+
+**La confianza cero presupone que todo está en una red abierta y que no es de confianza,** incluso los recursos detrás de los firewalls de la red corporativa. El modelo de confianza cero funciona con el principio de "no confiar en nadie y comprobarlo todo".
+
+> Un firewall es un dispositivo de seguridad de la red que monitorea el tráfico de red —entrante y saliente— y decide si permite o bloquea tráfico específico en función de un conjunto definido de reglas de seguridad. 
+> **Establecen una barrera entre las redes internas protegidas y controladas en las que se puede confiar y redes externas que no son de confianza, como Internet.**
+
+La capacidad de los atacantes para eludir los controles de acceso convencionales está acabando con cualquier ilusión de que las estrategias de seguridad tradicionales son suficientes. Por lo tanto, al no confiar en la integridad de la red corporativa, se refuerza la seguridad.
+
+_En la práctica, esto significa que ya no asumimos que una contraseña es suficiente para validar a un usuario, sino que agregamos la autenticación multifactor para proporcionar comprobaciones adicionales. En lugar de conceder acceso a todos los dispositivos de la red corporativa, solo se permite el acceso de los usuarios a las aplicaciones o a los datos específicos que necesiten._
+
+### Principios de GUID de confianza cero.
+
+Estos tres principio guian y respaldan el modo de implementar la seguridad:
+
+1. **Comprobación de forma explícita:** Autentique y autorice siempre el contenido en función de los puntos de datos disponibles, como la identidad del usuario, la ubicación, el dispositivo, el servicio o la carga de trabajo, la clasificación de los datos y las anomalías.
+
+2. **Acceso con privilegios mínimos:** Limite el acceso de los usuarios con acceso Just-in-Time y Just-Enough Access (JIT/JEA), LAS directivas de adaptación basadas en riesgos y la protección de datos para proteger los datos y la productividad.
+
+3. **Asumir infracciones de seguridad:** Acceda al segmento mediante la red, el usuario, los dispositivos y la aplicación. Use el cifrado para proteger los datos y el análisis para obtener visibilidad, detectar amenazas y mejorar la seguridad.
+
+### 6 pilares basicos de Confianza cero.
+
+**En el modelo de confianza cero, todos los elementos funcionan juntos para proporcionar seguridad de un extremo a otro.**
+
+1. **Las identidades** pueden ser usuarios, servicios o dispositivos. Cuando una identidad intenta obtener acceso a un recurso, debe comprobarse mediante la autenticación sólida y seguir los principios de acceso con privilegios mínimos.
+
+2. **Los dispositivos** crean una superficie de ataque de gran tamaño a medida que los datos fluyen desde los dispositivos hasta las cargas de trabajo locales y en la nube. La supervisión del estado y el cumplimiento de los dispositivos es un aspecto importante de la seguridad.
+
+3. **Las aplicaciones** son la manera en que se consumen los datos. Esto incluye la detección de todas las aplicaciones que se usan, lo que a veces se denomina Shadow IT, ya que no todas las aplicaciones se administran de forma centralizada. Este pilar también incluye la administración de permisos y acceso.
+
+4. **Los datos** se deben clasificar, etiquetar y cifrar en función de sus atributos. En última instancia, los esfuerzos de seguridad están relacionados con la protección de los datos y garantizan que permanecen seguros cuando salen de los dispositivos, las aplicaciones, la infraestructura y las redes que controla la organización.
+
+5. **La infraestructura**, ya sea local o en la nube, representa un vector de amenazas. Para mejorar la seguridad, debe evaluar la versión, la configuración y el acceso JIT, y usar la telemetría para detectar ataques y anomalías. Esto le permite bloquear o marcar automáticamente el comportamiento de riesgo y tomar medidas de protección.
+
+6. **Las redes** deben segmentarse, incluida la microsegmentación en la red más profunda. Asimismo, es necesario emplear la protección contra amenazas en tiempo real, el cifrado, la supervisión y el análisis de un extremo a otro.
+
+![seisP](https://docs.microsoft.com/es-mx/learn/wwl-sci/describe-security-concepts-methodologies/media/2-zero-trust-pillars-v2.png)

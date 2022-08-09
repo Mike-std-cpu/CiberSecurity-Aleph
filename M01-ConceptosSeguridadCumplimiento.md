@@ -136,3 +136,20 @@ Estos tres principio guian y respaldan el modo de implementar la seguridad:
 6. **Las redes** deben segmentarse, incluida la microsegmentación en la red más profunda. Asimismo, es necesario emplear la protección contra amenazas en tiempo real, el cifrado, la supervisión y el análisis de un extremo a otro.
 
 ![seisP](https://docs.microsoft.com/es-mx/learn/wwl-sci/describe-security-concepts-methodologies/media/2-zero-trust-pillars-v2.png)
+
+---
+
+## 🙊 Cifrado y código HASH.
+
+**Una manera de mitigar las amenazas de ciberseguridad más comunes es cifrar datos confidenciales o valiosos.**
+
+> El cifrado es el proceso para hacer que los datos aparezcan ilegibles e inútiles para visores no autorizados. Para usar o leer los datos cifrados, es necesario descifrarlos, lo que exige el uso de una clave secreta.
+
+Hay dos tipos de cifrado de nivel superior: 
+
+1. **Simétrico:** Usa la misma clave para cifrar y descifrar los datos.
+2. **Asimétrico:**  Usa un par de claves pública y privada. 
+
+Cualquiera de las claves puede cifrar los datos, pero no se puede usar una sola clave para descifrar los datos cifrados. Para descifrarlos se necesita la otra clave emparejada. El cifrado asimétrico se usa para cosas como el acceso a sitios en Internet mediante el protocolo HTTPS y las soluciones de firma de datos electrónicas. El cifrado puede proteger los datos en reposo o en tránsito.
+
+![cifrados](https://docs.microsoft.com/es-mx/learn/wwl-sci/describe-security-concepts-methodologies/media/6-encryption.png)

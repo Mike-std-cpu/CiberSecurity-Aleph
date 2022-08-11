@@ -59,3 +59,25 @@ Esto debe ser una base para toda organización ya que la seguridad interna debe 
 3. **Autorización.** Esta trata sobre el procesamiento de los datos de identidad entrante para determinar el nivel de acceso de una persona o servicio autenticado dentro de la aplicación o servicio al que quiere obtener acceso.
 
 4. **Auditoría.** Esta consiste en realizar un seguimiento de quién realiza qué, cuándo, dónde y cómo. _La auditoría incluye la creación de informes, alertas y gobernanza de identidades en profundidad._
+
+---
+
+## 📇 Rol del proveedor de identidades.
+
+Entrando a la modernidad, esxiste el teminoi de **Autenticación moderna**, este es un término genérico para los métodos de autenticación y autorización entre un cliente, como un portátil o un teléfono, y un servidor, como un sitio web o una aplicación. En el centro de la autenticación moderna está el rol del proveedor de identidades. 
+
+> Un proveedor de identidades crea, mantiene y administra la información de identidad al tiempo que proporciona servicios de autenticación, autorización y auditoría.
+
+> Con la autenticación moderna, quien proporciona todos los servicios, incluidos todos los servicios de autenticación, es un proveedor de identidades central. El proveedor de identidades almacena y administra de forma centralizada la información que se usa para autenticar el usuario en el servidor.
+
+### 🤔 ¿Que son los token?
+
+Pues bien, los token son un tipo  de documento firmado *criptograficamente*, que coniene elementos sobre la persona que usa el cliente y a los que llamamos notificaciónes --> Estas notificaciones no son más que **información** sobre la identidad que lamna al servidor, y no tiene que ser una persona. _(Son pares de valores de atributos que contienen información sobre la identidad que esta usando el servicio)_
+
+Teniendo en cuenta lo de los tokens **gracias a la autenticación moderna,** el cliente se comunica con el proveedor de identidades mediante la asignación de una identidad que se puede autenticar. Cuando se ha comprobado la identidad (que puede ser un usuario o una aplicación), el proveedor de identidades emite un token de seguridad que el cliente envía al servidor.
+
+> El servidor valida el token de seguridad a través de su relación de confianza con el proveedor de identidades. Mediante el uso del token de seguridad y la información que contiene, el usuario o la aplicación accede a los recursos necesarios en el servidor. En este escenario, el proveedor de identidades almacena y administra el token y la información que contiene. El proveedor de identidades centralizado proporciona el servicio de autenticación.
+
+### Inicio de sesion Unica.
+
+Otra funcionalidad fundamental de un proveedor de identidades y "autenticación moderna" es la compatibilidad con el inicio de sesión único (SSO). Con el SSO, el usuario inicia sesión una vez y esa credencial se usa para tener acceso a varias aplicaciones o recursos. A la acción de configurar el SSO para que funcione entre varios proveedores de identidades se le conoce como federación.

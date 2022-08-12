@@ -52,7 +52,7 @@ Para eos debemos de tener en claro que la **Idetidad es un conjunto de aspectos 
 
 Esto debe ser una base para toda organización ya que la seguridad interna debe de estar altamente organizada, en esta hay una colección de procesos, tecnologías y directivas **para administrar identidades digitales y controlar cómo se usan para tener acceso a los recursos.** Pueden organizarse en cuatro pilares fundamentales que las organizaciones deben tener en cuenta al crear una infraestructura de identidad.
 
-1. **Administración.** La administración consiste en la creación y la administración o gobernanza de identidades para los usuarios, dispositivos y servicios. Como administrador, _puede administrar cómo y en qué circunstancias pueden cambiar las características de las identidades_ (se pueden crear, actualizar y eliminar).
+1. **Administración.** La administración consiste en la creación y la administración o gobernanza de identidades para los usuarios, dispositivos y servicios _(Creando un ambiente seguro)_. Como administrador, _puede administrar cómo y en qué circunstancias pueden cambiar las características de las identidades_ (se pueden crear, actualizar y eliminar).
 
 2. **Autenticación.** Indica _cuánto necesita saber un sistema de TI sobre una identidad para tener pruebas suficientes de que realmente son quienes dicen ser. Implica el acto de solicitar a un usuario credenciales legítimas._
 
@@ -81,3 +81,33 @@ Teniendo en cuenta lo de los tokens **gracias a la autenticación moderna,** el 
 ### Inicio de sesion Unica.
 
 Otra funcionalidad fundamental de un proveedor de identidades y "autenticación moderna" es la compatibilidad con el inicio de sesión único (SSO). Con el SSO, el usuario inicia sesión una vez y esa credencial se usa para tener acceso a varias aplicaciones o recursos. A la acción de configurar el SSO para que funcione entre varios proveedores de identidades se le conoce como federación.
+
+---
+
+## 📚 Concepto de servicios de directorios y Active Directory.
+
+En el contexto de una red de equipos, **un directorio es una estructura jerárquica que almacena información acerca de los objetos de la red.** Un servicio de directorio almacena los datos del directorio y los pone a disposición de los usuarios de red, los administradores, los servicios y las aplicaciones.
+
+> **Active Directory (AD)** es un conjunto de servicios de directorio desarrollados por Microsoft como parte de Windows 2000 para redes locales basadas en dominio. El servicio más conocido de este tipo es Active Directory Domain Services (AD DS). Almacena información sobre los miembros del dominio, incluidos los dispositivos y los usuarios, comprueba sus credenciales y define sus derechos de acceso. Un servidor que ejecuta AD DS es un controlador de dominio.
+
+*AD DS* es un componente central de las organizaciones con una infraestructura de TI local. **AD DS ofrece a las organizaciones la capacidad de administrar varios sistemas y componentes de la infraestructura local mediante una única identidad por usuario.** Sin embargo, AD DS no es compatible de forma nativa con los dispositivos móviles, las aplicaciones SaaS o las aplicaciones de línea de negocio que requieren métodos de autenticación moderna.
+
+El crecimiento de Cloud Services, las aplicaciones SaaS y los dispositivos personales que se usan en el trabajo, ha dado como resultado la necesidad de la autenticación moderna y una evolución de las soluciones de identidad basadas en Active Directory.
+
+Azure Active Directory es la siguiente evolución de las soluciones de administración de identidad y acceso. Proporciona a las organizaciones una solución de identidad como servicio (IDaaS) para todas sus aplicaciones en la nube y en el entorno local. 
+
+---
+
+## 👨‍💼 Conceptos de Federación.
+
+**La federación permite el acceso a los servicios a través de los límites de la organización o del dominio mediante el establecimiento de relaciones de confianza entre el proveedor de identidades del dominio correspondiente.**
+
+![federacion](https://docs.microsoft.com/es-es/learn/wwl-sci/describe-identity-principles-concepts/media/5-federated-identification.png)
+
+> Con la federación, no es necesario que un usuario mantenga un nombre de usuario y una contraseña diferentes al acceder a los recursos de otros dominios, podremos visualizarlo de esta manera: 
+
+- El sitio web, en el dominio A, usa los servicios de autenticación del proveedor de identidades A (IdP-A).
+- El usuario, en el dominio B, se autentica con el proveedor de identidades B (IdP-B).
+- IdP-A tiene una relación de confianza configurada con IdP-B.
+- Cuando el usuario, que desea acceder al sitio web, proporciona sus credenciales, el sitio web confía en el usuario y permite el acceso. Este acceso se permite debido a la confianza que ya se ha establecido entre los dos proveedores de identidades.
+

@@ -169,3 +169,37 @@ Azure AD B2C admite millones de usuarios y miles de millones de autenticaciones 
 ![B2C](https://docs.microsoft.com/es-es/learn/wwl-sci/explore-basic-services-identity-types/media/customized-screen.png)
 
 > Puede configurar Azure AD B2C para permitir que los usuarios inicien sesión en su aplicación con las credenciales de proveedores de identidades (IdP) externos de redes sociales o de empresa. Azure AD B2C admite proveedores de identidades externos, como Facebook, cuenta Microsoft, Google, Twitter y cualquier otro proveedor de identidades compatible con los protocolos OAuth 1.0, OAuth 2.0, OpenID Connect y SAML.
+
+--- 
+
+## Descripcion del concepto de indentidad híbrida.
+
+Micrsofot nos da la definicion de idnetidad hbrída como la conbinacion de aplicaciones locales y dentor de la nube, independientemente de si una aplicación está hospedada en el entorno local o en la nube, los usuarios esperan y exigen un acceso sencillo. Las soluciones de identidad de Microsoft abarcan funcionalidades locales y basadas en la nube. Estas soluciones crean una identidad de usuario común para la autenticación y autorización en todos los recursos, independientemente de la ubicación. A esto lo llamamos identidad híbrida.
+
+![hibrida](https://docs.microsoft.com/es-es/learn/wwl-sci/explore-basic-services-identity-types/media/azure-active-directory-connect-expanded.png)
+
+> Es una decisión importante en el recorrido de una organización a la nube y sobre cómo los usuarios iniciarán sesión y accederán a las aplicaciones. Es la base de la infraestructura de TI moderna de la organización sobre la que las organizaciones crearán su solución de seguridad, identidad y administración de acceso mediante Azure AD. Por último, una vez que se establece un método de autenticación, resulta más difícil de cambiar porque puede interrumpir la experiencia de inicio de sesión de los usuarios. En lo que respecta a la autenticación de identidades híbridas, Microsoft ofrece varias maneras de autenticarse.
+
+- **Sincronización de hash de contraseña de Azure AD.**
+
+_La sincronización de hash de contraseña de Azure AD es la manera más sencilla de habilitar la autenticación para los objetos de directorio local en Azure AD. Los usuarios pueden iniciar sesión en los servicios de Azure AD con el mismo nombre de usuario y la misma contraseña que usan para hacerlo en su instancia local de Active Directory. Azure AD controla el proceso de inicio de sesión de los usuarios._
+
+![hash](https://docs.microsoft.com/es-es/learn/wwl-sci/explore-basic-services-identity-types/media/password-hash-sync.png)
+
+- **Autenticación transferida de Azure AD.**
+
+_ La autenticación transferida de Azure AD permite a los usuarios iniciar sesión en aplicaciones locales y basadas en la nube con las mismas contraseñas, como la sincronización de hash de contraseña. Pero una diferencia clave es que cuando los usuarios inician sesión con la autenticación transferida de Azure AD, las contraseñas se validan directamente en la instancia local de Active Directory. La validación de las contraseñas no se produce en la nube. Esto puede ser un factor importante para las organizaciones que quieran aplicar sus directivas de seguridad y contraseñas de Active Directory locales._
+
+![pass-through](https://docs.microsoft.com/es-es/learn/wwl-sci/explore-basic-services-identity-types/media/pass-through-authentication.png)
+
+- **Autenticación federada.**
+
+_La federación se recomienda como autenticación para las organizaciones que tienen características avanzadas que no se admiten actualmente en Azure AD, incluido el inicio de sesión con tarjetas inteligentes o certificados, con un servidor local de autenticación multifactor (MFA) o mediante una solución de autenticación de terceros._
+
+_En la autenticación federada, Azure AD delega el proceso de autenticación a un sistema independiente de autenticación de confianza como, por ejemplo, una instancia local de Servicios de federación de Active Directory (AD FS), para validar la contraseña del usuario. Este método de inicio de sesión garantiza que toda la autenticación de usuarios tiene lugar de forma local._
+
+> La autenticación federada usa Azure AD Connect, pero también necesita servidores adicionales para admitir la federación, lo que da lugar a una superficie de infraestructura mayor.
+
+![federted](https://docs.microsoft.com/es-es/learn/wwl-sci/explore-basic-services-identity-types/media/federated-authentication.png)
+
+

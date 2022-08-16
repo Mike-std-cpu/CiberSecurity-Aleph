@@ -135,3 +135,37 @@ El registro y la unión de dispositivos a Azure AD proporciona a los usuarios el
 
 ---
 
+## Descripcion de los tipos de identidades.
+
+Hoy en día el mundo se mueve gracias a la colaboración y al trabajo con personas tanto dentro como fuera de su organización. Esto significa que a veces necesitará proporcionar acceso a las aplicaciones o a los datos de su organización a usuarios externos. Por eso mismo, **Azure AD External Identities** _es un conjunto de capacidades que permiten a las organizaciones permitir el acceso a usuarios externos, **como clientes o asociados.**_ Los clientes, asociados y otros usuarios invitados pueden "traer sus propias identidades" para iniciar sesión.
+
+En estos casos, empresas como facebook, google u otras identidades de empresas pueden habilitar sus identidades con la compatibilidad de Azure AD a proveedores externos. **Existen dos tipos de identidades externas de Azure AD**
+
+1. Identities B2B
+2. Identities B2C.
+
+### B2B
+
+Entrando al concepto de la **colaboración B2B** _le permite compartir las aplicaciones y los servicios de la organización con usuarios invitados de otras organizaciones, a la vez que mantiene el control sobre sus propios datos._
+
+> La colaboración B2B usa un proceso de invitación y canje. También puede habilitar los flujos de usuario de registro de autoservicio para permitir que los usuarios externos se suscriban a aplicaciones o recursos por sí mismos. Una vez que el usuario externo ha canjeado su invitación o ha completado el registro, se representa en el mismo directorio que los empleados, pero con un tipo de usuario de invitado. **Como invitado, ahora puede acceder a los recursos con sus credenciales.**
+
+**Los usuarios invitados pueden administrarse de la misma manera que los empleados**, se pueden agregar a los mismos grupos, etc. Con B2B, se admite el inicio de sesión único en todas las aplicaciones conectadas a Azure AD.
+
+![b2b](https://docs.microsoft.com/es-es/azure/active-directory/external-identities/media/what-is-b2b/b2b-collaboration-overview.png)
+
+> Es una característica de External Identities que le permite invitar a los usuarios invitados a colaborar con una organización. La colaboración B2B le permite compartir de forma segura las aplicaciones y los servicios de la empresa con usuarios externos, al tiempo que mantiene el control sobre sus propios datos corporativos. Trabaje de forma segura con asociados externos, grandes o pequeños, incluso si no tienen Azure AD o un departamento de TI.
+
+### B2C
+
+**Azure AD B2C** es una solución de administración de acceso de identidades de cliente (CIAM). **Azure AD B2C permite a los usuarios externos iniciar sesión con sus identidades de cuenta de redes sociales, de empresa o locales preferidas, para obtener un inicio de sesión único en las aplicaciones.**
+
+Azure AD B2C admite millones de usuarios y miles de millones de autenticaciones al día. Asimismo, se encarga del escalado y la seguridad de la plataforma de autenticación, de la supervisión y del control automático de amenazas, como la denegación del servicio, la difusión de contraseñas o los ataques por fuerza bruta.
+
+> Gracias a Azure AD B2C, los usuarios externos se administran en el directorio de Azure AD B2C, de forma independiente del directorio de asociados y empleados de la organización. Igualmente, se admite el inicio de sesión único para aplicaciones que sean propiedad de los clientes dentro del inquilino de Azure AD B2C.
+
+**Azure AD B2C es una solución de autenticación que puede personalizar con su marca para que se fusione con sus aplicaciones web y móviles.**
+
+![B2C](https://docs.microsoft.com/es-es/learn/wwl-sci/explore-basic-services-identity-types/media/customized-screen.png)
+
+> Puede configurar Azure AD B2C para permitir que los usuarios inicien sesión en su aplicación con las credenciales de proveedores de identidades (IdP) externos de redes sociales o de empresa. Azure AD B2C admite proveedores de identidades externos, como Facebook, cuenta Microsoft, Google, Twitter y cualquier otro proveedor de identidades compatible con los protocolos OAuth 1.0, OAuth 2.0, OpenID Connect y SAML.

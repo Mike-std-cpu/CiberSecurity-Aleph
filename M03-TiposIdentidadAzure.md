@@ -81,3 +81,57 @@ _También hay una opción para las licencias de característicasde "Pago por uso
 
 ---
 
+## Descripcion de los tipos de identidad de Azure AD.
+
+En azure AD existen distintos tipos de identidades:
+
+1. Uusarios.
+2. Entidades de servicios.
+3. Identidades administradas.
+4. Dispositivos.
+
+### Usarios.
+
+Los empleados e invitados se representan como usuarios en Azure AD. Si tiene varios usuarios con las mismas necesidades de acceso, puede crear un grupo.
+
+> Los grupos se usan para conceder permisos de acceso a todos los miembros del grupo, en lugar de tener que asignar derechos de acceso individualmente.
+
+**La colaboración de negocio a negocio (B2B)** de Azure AD es una característica de External Identities e incluye una funcionalidad **para agregar usuarios invitados**. Gracias a la colaboración B2B, _una organización puede compartir aplicaciones y servicios de forma segura con usuarios invitados de otra organización._
+
+### Entidad de servicios.
+
+Una entidad de servicio es, básicamente, **una identidad para una aplicación**. Para que una aplicación delegue su identidad y funciones de acceso a Azure AD, primero se debe registrar con Azure AD a fin de habilitar su integración. Una vez que se registra, **se crea una entidad de servicio en cada inquilino de Azure AD donde se usa la aplicación.** La entidad de servicio habilita características básicas como la autenticación y autorización de la aplicación en los recursos protegidos por el inquilino de Azure AD.
+
+Para que las entidades de servicio puedan acceder a los recursos protegidos por el inquilino de Azure AD, los desarrolladores de aplicaciones deben administrar y proteger las credenciales.
+
+### Identidad Administrada.
+
+Las identidades administradas son un tipo de entidad de servicio que se administran de forma automática en Azure AD y eliminan la necesidad de que los desarrolladores administren las credenciales. Las identidades administradas proporcionan una identidad para que la usen las aplicaciones al conectarse a recursos de Azure compatibles con la autenticación de Azure AD, sin costo adicional.
+
+>> En otras palabras, es la conceccion de apliaciones conservicios de Azure para el mismo azure.
+>>                              **CONEXION DE AZURE CON AZURE**
+
+- **Asignadas por el sistema.** Algunos servicios de Azure permiten habilitar una identidad administrada directamente en una instancia de servicio. Cuando se habilita una identidad administrada asignada por el sistema, se crea una identidad en Azure AD que está vinculada al ciclo de vida de esa instancia de servicio. Por tanto, cuando se elimina el recurso, Azure elimina automáticamente la identidad. Por diseño, solo ese recurso de Azure puede usar esta identidad para solicitar tokens de Azure AD.
+
+- **Asignadas por el usuario.** También es posible crear una identidad administrada como un recurso independiente de Azure. Una vez que se crea una identidad administrada asignada por el usuario, puede asignarla a una o varias instancias de un servicio de Azure. En el caso de las identidades administradas asignadas por el usuario, la identidad se administra independientemente de los recursos que la utilicen.
+
+### Dispositivos.
+
+Un dispositivo es un producto de hardware, como los dispositivos móviles, los equipos portátiles, los servidores o las impresoras. **Una identidad de dispositivo proporciona a los administradores información que pueden usar al tomar decisiones de acceso o configuración.** Hay varias formas de configurar las identidades de dispositivo en Azure AD.
+
+1. **Dispositivos registrados en Azure AD.** El objetivo es proporcionar a los usuarios la **compatibilidad** con escenarios **Bring Your Own Device (BYOD)** o de dispositivos móviles. En estos escenarios, **el usuario puede acceder a los recursos de la organización con un dispositivo personal.**
+
+> Los dispositivos registrados en Azure AD se registran sin necesidad de que una cuenta de la organización inicie sesión en el dispositivo. Los sistemas operativos compatibles con los dispositivos registrados de Azure AD incluyen Windows 10 y versiones posteriores, iOS, Android y macOS.
+
+2. **Unido a Azure AD.** Es el que se une mediante una cuenta de la organización, que luego se usa para iniciar sesión en el dispositivo. 
+
+> Los dispositivos unidos a Azure AD suelen ser propiedad de la organización. Los sistemas operativos compatibles con dispositivos unidos a Azure AD incluyen Windows 10 o versiones posteriores (excepto Home Edition) y máquinas virtuales con Windows Server 2019 que se ejecutan en Azure.
+
+3. **Dispositivos unidos a Azure AD híbrido.** Las organizaciones con implementaciones locales de Active Directory existentes se pueden beneficiar de algunas de las funcionalidades proporcionadas por Azure AD mediante la implementación de dispositivos unidos a Azure AD híbrido. 
+
+> **Estos dispositivos están unidos a la instancia local de Active Directory y Azure AD exige que la cuenta de la organización inicie sesión en el dispositivo.**
+
+El registro y la unión de dispositivos a Azure AD proporciona a los usuarios el inicio de sesión único (SSO) a los recursos en la nube. Además, los dispositivos que están unidos a Azure AD se benefician de la experiencia de inicio de sesión único en los recursos y aplicaciones que dependen de la instancia de Active Directory local.
+
+---
+

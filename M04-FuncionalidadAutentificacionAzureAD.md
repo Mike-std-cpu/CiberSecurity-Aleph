@@ -129,3 +129,37 @@ Las siguientes formas adicionales de verificación, se pueden usar con la autent
 - Aplicar el registro de autenticación multifactor de Azure Active Directory para todos los usuarios.
 - Forzar a los administradores a usar la autenticación multifactor.
 - Requerir a todos los usuarios que realicen la autenticación multifactor cuando sea necesario.
+
+--- 
+
+## Autoservicio de restablecimiento de contraseñas (SSPR) en Azure AD.
+
+Se habla de que el SSPR es una caracteristica de productividad de Azure AD, donde permite a los usurios a cambiar o restablecer su contraseña, sin la necesidad de que tengan que intervenir los administradores o el departamento de soporte, evitando perdida de tiempo y productividad.
+
+> Si la cuenta de un usuario está bloqueada o se ha olvidado de la contraseña, puede seguir la indicación para restablecerla y volver al trabajo. Esta capacidad reduce las llamadas al departamento de soporte técnico y la pérdida de productividad cuando un usuario no puede iniciar sesión en su dispositivo o en una aplicación.
+
+El autoservicio de restablecimiento de contraseña funciona en los siguientes escenarios:
+
+- **Cambio de contraseña:** el usuario conoce la contraseña, pero quiere cambiarla por una nueva.
+- **Restablecimiento de contraseña:** el usuario no puede iniciar sesión, por ejemplo, cuando ha olvidado la contraseña, y quiere restablecerla.
+- **Desbloqueo de cuenta:** el usuario no puede iniciar sesión porque su cuenta está bloqueada.
+
+Para usar el autoservicio de restablecimiento de contraseña, los usuarios deben cumplir lo siguiente:
+
+1. Tener asignada una licencia de Azure AD. Consulte la sección Más información de la unidad de resumen y recursos para obtener un vínculo a los requisitos de licencia para el autoservicio de restablecimiento de contraseña de Azure Active Directory.
+2. Estar habilitados para SSPR por un administrador.
+3. Estar registrado con los métodos de autenticación que quieren usar. Se recomiendan dos o más métodos de autenticación en caso de que uno no esté disponible.
+
+Están disponibles los siguientes métodos de autenticación:
+
+- Notificación en aplicación móvil
+- Código de aplicación móvil
+- Email
+- Teléfono móvil
+- Teléfono del trabajo
+- Preguntas de seguridad
+
+> Cuando un usuario restablece su contraseña mediante el autoservicio de restablecimiento de contraseña, dicha contraseña también puede reescribirse en una instancia de Active Directory local. La reescritura de contraseñas permite a los usuarios usar sus credenciales actualizadas con las aplicaciones y dispositivos locales sin ninguna demora.
+
+---
+

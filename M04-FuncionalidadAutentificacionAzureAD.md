@@ -163,3 +163,36 @@ Están disponibles los siguientes métodos de autenticación:
 
 ---
 
+## Funcionalidades de administración y proteccion de contraseñas de Azure AD.
+
+El uso y administración de contraseñas es una de las mejores ventajas de Azure AD, donde esta reduce el riesgo que los usuarios establezcan contraseñas no seguras , esta detecta y bloquea las contraseñas no seguras conocidas.
+
+### 1. Lista global de contraseñas prohibidas
+Microsoft actualiza y aplica automáticamente una lista global de contraseñas prohibidas que incluye contraseñas no seguras conocidas. Esta lista la mantiene el equipo de Azure AD Identity Protection, que analiza los datos de telemetría de seguridad para buscar contraseñas poco seguras o vulneradas. Algunos ejemplos de contraseñas que podrían estar bloqueadas son P@$$w0rd o Passw0rd1 y todas sus variaciones.
+
+Las variaciones se crean mediante un algoritmo que transpone mayúsculas y minúsculas, así como letras a números; por ejemplo, "1" a "l". Las variaciones de Password1 pueden incluir a Passw0rd1, Pass0rd1 y otras. A continuación, estas contraseñas se comprueban y se agregan a la lista global de contraseñas prohibidas y se ponen a disposición de todos los usuarios de Azure AD. La lista global de contraseñas prohibidas se aplica automáticamente y no se puede deshabilitar.
+
+> Si un usuario de Azure AD intenta usar como contraseña una de estas contraseñas no seguras, recibirá una notificación para elegir otra más segura. La lista global prohibida se crea a partir de ataques de difusión de contraseñas reales. Este enfoque mejora la seguridad y eficacia generales, y el algoritmo de validación de contraseñas también usa técnicas inteligentes de coincidencia aproximada que se usan para buscar cadenas que coincidan aproximadamente con un patrón. Protección de contraseñas de Azure AD detecta y bloquea de manera eficaz millones de las contraseñas poco seguras más comunes que se usan en su empresa.
+
+### 2. Listas personalizadas de contraseñas prohibidas
+Los administradores también pueden crear listas personalizadas de contraseñas prohibidas para satisfacer necesidades específicas de seguridad empresarial. La lista personalizada de contraseñas prohibidas impide el uso de contraseñas como el nombre o la ubicación de la organización. Las contraseñas agregadas a la lista personalizada de contraseñas prohibidas deben centrarse en términos específicos de la organización, como:
+
+- Nombres de marca
+- Nombres de producto
+- Ubicaciones, por ejemplo, la oficina central de la empresa
+- Términos internos específicos de la empresa
+- Abreviaturas que tienen un significado específico en la empresa
+
+> La lista personalizada de contraseñas prohibidas se combina con la lista global de contraseñas prohibidas para bloquear las variaciones de todas las contraseñas.
+
+Las listas de contraseñas prohibidas son una característica de Azure AD Premium 1 o 2.
+
+### 3. Protección contra la difusión de contraseñas
+Protección con contraseña de Azure AD le ayuda a defenderse contra los ataques de difusión de contraseña. La mayoría de los ataques de difusión de contraseñas envían solo algunas de las contraseñas menos seguras conocidas en cada una de las cuentas de una empresa. Esta técnica permite al atacante buscar rápidamente una cuenta en peligro y evitar posibles umbrales de detección.
+
+Protección con contraseña de Azure AD bloquea de forma eficaz todas las contraseñas no seguras conocidas que se puedan usar en los ataques de difusión de contraseña. Esta protección se basa en los datos de telemetría de seguridad del mundo real que genera Azure AD, los cuales se usan para crear la lista global de contraseñas prohibidas.
+
+### 4. Seguridad híbrida
+Si busca seguridad híbrida, los administradores pueden integrar la Protección de contraseñas de Azure AD en un entorno de Active Directory local. Un componente instalado en el entorno local recibe la lista global de contraseñas prohibidas y las directivas personalizadas de protección de contraseñas de Azure AD. A continuación, los controladores de dominio las usan para procesar los eventos de cambio de contraseña. Este enfoque híbrido garantiza que, siempre que un usuario cambie su contraseña, se aplique la Protección de contraseñas de Azure AD.
+
+Aunque la protección de contraseñas mejora la seguridad de las contraseñas, debe seguir usando las características recomendadas, como la autenticación multifactor de Azure Active Directory. Las contraseñas por sí solas, incluso las seguras, no lo protegerán tanto como varias capas de seguridad.

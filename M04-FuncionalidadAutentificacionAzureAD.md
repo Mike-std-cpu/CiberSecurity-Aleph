@@ -1,10 +1,12 @@
 # Describir las funcionalidades de autentificacion de Azure AD.
 
+## Metodos de Autentificación.
+
 Este modulo nos deja en claro la funcionalidad principal y caracteristicas que  una plataforma de identidades puede llegar hacer, tales como:
 
 **Comprobar y Autentificar credenciales cuando un usuario inicia sesión en un dispositivo, aplicacion o servicio.**
 
-## 🔑 Contraseñas.
+### 🔑 Contraseñas.
 
 **Las contraseñas son la forma más común de autenticación,** pero tienen muchos problemas, especialmente si se usan en la autenticación de un solo factor, donde solo se usa una forma de autenticación. Si son bastante fáciles de recordar, un hacker podrá vulnerarlas fácilmente. Las contraseñas seguras que no son fáciles de atacar son difíciles de recordar, y afectan a la productividad de los usuarios cuando las olvidan.
 
@@ -14,7 +16,7 @@ Este modulo nos deja en claro la funcionalidad principal y caracteristicas que  
 
 ---
 
-## 📲 Telefono.
+### 📲 Telefono.
 
 Azure AD permite formas de autentificación basada en telefonos.
 
@@ -32,7 +34,7 @@ Los usuarios también pueden optar por comprobar su identidad a través de la me
 
 ---
 
-## OATH.
+### OATH.
 
 OATH (Open Authentication)** es un estándar abierto que especifica cómo se generan los códigos de contraseña de un solo uso y duración definida (TOTP)**. Los códigos de contraseña de un solo uso se pueden usar para autenticar a un usuario. Los TOTP de OATH se implementan mediante software o hardware para generar los códigos.
 
@@ -48,7 +50,7 @@ Los tokens de software OATH suelen ser aplicaciones. Azure AD genera la clave se
 
 ---
 
-## 🔓 Autentificación sin contraseñas.
+### 🔓 Autentificación sin contraseñas.
 
 En muchas organizaciones, el objetivo final es eliminar el uso de contraseñas como parte de los eventos de inicio de sesión. Cuando un usuario inicia sesión con un método sin contraseña, las credenciales se proporcionan mediante el uso de métodos como la información biométrica en Windows Hello para empresas o una clave de seguridad FIDO2. Un atacante no puede duplicar fácilmente estos métodos de autenticación.
 
@@ -56,14 +58,14 @@ En muchas organizaciones, el objetivo final es eliminar el uso de contraseñas c
 
 Windows hello es una nueva implementacion biometrico con el SO de microsoft, donde se empiexza a despegar y ofreciendo seguridad aparte, de la seguridad de 2 factores que ya se han mencionado antes.
 
-### Windows Hello.
+#### Windows Hello.
 
 Windows Hello para empresas reemplaza las contraseñas con una autenticación de dos factores sólida en dispositivos. Esta autenticación en dos fases es una combinación de una clave o un certificado vinculado a un dispositivo y algo que la persona conoce (un PIN) o algo que la persona es (biometría). La entrada de PIN y el gesto biométrico desencadenan el uso de la clave privada para firmar criptográficamente los datos que se envían al proveedor de identidades. El proveedor de identidades comprueba la identidad del usuario y autentica al usuario.
 
 >> Windows Hello para empresas ayuda a protegerse contra el robo de credenciales, ya que un atacante debe tener tanto el dispositivo como la información biométr
 ica o el PIN, lo que dificulta el acceso sin el conocimiento del empleado.
 
-## FIDO2
+### FIDO2
 
 Fast Identity Online (FIDO) **es un estándar abierto para la autenticación sin contraseña. FIDO permite a los usuarios y a las organizaciones aprovechar el estándar para iniciar sesión en sus recursos mediante una clave de seguridad externa o una clave de plataforma integrada en un dispositivo, lo que elimina la necesidad de usar usuario y contraseña.**
 
@@ -75,7 +77,7 @@ Con las claves de seguridad FIDO2, los usuarios pueden iniciar sesión en dispos
 
 ---
 
-## 🚀 Aplicación Microsoft Authenticator.
+### 🚀 Aplicación Microsoft Authenticator.
 
 Como método de autenticación sin contraseña, la aplicación Microsoft Authenticator se puede usar como forma principal de autenticación para iniciar sesión en cualquier cuenta de Azure AD o como opción de verificación adicional durante el autoservicio de restablecimiento de contraseña (SSPR) o Azure AD eventos de Multi-Factor Authentication.
 
@@ -87,3 +89,43 @@ Como método de autenticación sin contraseña, la aplicación Microsoft Authent
 ![2](https://docs.microsoft.com/es-es/learn/wwl-sci/explore-authentication-capabilities/media/3-microsoft-authenticator-app-approval-request.png)
 
 Cuando un usuario elige Authenticator como método de autenticación secundario, para verificar su identidad, se envía una notificación push al teléfono o tableta. Si la notificación es legítima, el usuario selecciona Aprobar; de lo contrario, selecciona Denegar.
+
+--- 
+
+## Autentificación multifactor (MFA) en Azure AD.
+
+Esta parter del modulo, se definira la autentifiacion multifactor donde se requiere más de una forma de comprobación para demostrar que una identidad es legítima, como un dispositivo de confianza o una detección de huellas digitales. Esto implica que, aunque la contraseña de una identidad se haya puesto en peligro, un hacker no podrá acceder al recurso.
+
+> La autenticación multifactor **mejora drásticamente la seguridad de las identidades**, a la vez que sigue siendo simple para los usuarios. El factor de autenticación adicional debe ser algo difícil de obtener o duplicar para un atacante.
+
+El funcionamiento de la autenticación multifactor de Azure Active Directory solicita lo siguiente:
+
+- 🔑 **Algo que sabe:** normalmente una contraseña o un PIN y
+- 📲 **Algo que tiene:** como un dispositivo de confianza que no se duplica fácilmente; por ejemplo, un teléfono o una clave de hardware, o
+- 👨‍💼 **Algo que forma parte de usted:** información biométrica como una huella digital o una detección de rostro.
+
+Las solicitudes de comprobación de la autenticación multifactor están configuradas para formar parte del evento de inicio de sesión en Azure AD. Azure AD solicita y procesa automáticamente la autenticación multifactor, sin realizar cambios en las aplicaciones o servicios. Cuando un usuario inicia sesión, recibe una solicitud de autenticación multifactor y puede elegir una de las formas de verificación adicionales que haya registrado.
+
+**Un administrador puede requerir ciertos métodos de comprobación, o el usuario puede acceder a la sección Mi cuenta para editar o agregar métodos de comprobación.**
+
+Las siguientes formas adicionales de verificación, se pueden usar con la autenticación multifactor de Azure AD:
+
+- Aplicación Microsoft Authenticator
+- Windows Hello para empresas
+- Clave de seguridad FIDO2
+- Token de hardware OATH (versión preliminar)
+- Token de software OATH
+- sms
+- Llamada de voz
+
+![factor](https://docs.microsoft.com/es-es/learn/wwl-sci/explore-authentication-capabilities/media/2-microsoft-authenticator-app.png)
+
+#### Valores predeterminados de seguridad y Autentificación multifactor.
+
+**Son un conjunto de mecanismos de seguridad de identidad básicos recomendados por Microsoft. Cuando estén habilitadas, estas recomendaciones se aplicarán automáticamente en su organización.** 
+
+> El objetivo es asegurarse de que todas las organizaciones gocen de un nivel básico de seguridad sin ningún costo adicional. Estos valores predeterminados habilitan algunas de las características y controles de seguridad más comunes, entre los que se incluyen los siguientes:
+
+- Aplicar el registro de autenticación multifactor de Azure Active Directory para todos los usuarios.
+- Forzar a los administradores a usar la autenticación multifactor.
+- Requerir a todos los usuarios que realicen la autenticación multifactor cuando sea necesario.

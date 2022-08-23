@@ -94,3 +94,29 @@ Entre los casos de uso de ejemplo en los que es posible que los empleados o invi
 * Presentación de los términos a todos los usuarios de su organización.
 
 > Los términos de uso se presentan en formato PDF, con contenido que crea el usuario, como un documento de contrato existente. Los términos de uso también se pueden presentar a los usuarios en dispositivos móviles.
+
+---
+
+## Privileged Identity Management.
+
+Privileged Identity Management (PIM) es un servicio de Azure Active Directory (Azure AD) **que permite administrar, controlar y supervisar el acceso a recursos importantes de la organización.** Esto incluye a los recursos de Azure AD, Azure y los de otros servicios en línea de Microsoft, como Microsoft 365 o Microsoft Intune. 
+
+**PIM mitiga los riesgos de los permisos de acceso excesivos, innecesarios o mal utilizados. Requiere una justificación para saber por qué los usuarios quieren los permisos y aplica la autenticación multifactor para activar cualquier rol.**
+
+PIM tiene las siguientes características:
+
+- **Just-in-Time**, ya que proporciona acceso con privilegios solo cuando sea necesario, no antes.
+- Sujeto a plazos mediante la** asignación de fechas iniciales y finales** que indican cuándo un usuario puede acceder a los recursos.
+- **Basado en la aprobación**, ya que requiere de una aprobación específica para activar los privilegios.
+- **Visible**, ya que envía notificaciones cuando se activan los roles con privilegios.
+- Se puede auditar, ya que permite descargar un historial de acceso completo.
+
+### 🤔 ¿por que usarlo?
+
+- Reduce la posibilidad de que un actor malintencionado obtenga acceso.
+- Reduce al mínimo el número de personas que tienen acceso a información o recursos seguros.
+- Supervisar lo que hacen los usuarios con sus privilegios de administrador.
+
+---
+
+

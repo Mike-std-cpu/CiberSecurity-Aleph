@@ -119,4 +119,44 @@ PIM tiene las siguientes características:
 
 ---
 
+## Azure AD Identity Protection.
 
+Identity Protection es una herramienta que permite a las organizaciones realizar tres tareas clave:
+
+1. Automatizar la detección y corrección de riesgos basados en la identidad.
+
+2. Investigar los riesgos de usar los datos en el portal.
+
+3. Exportar los datos de detección de riesgos a utilidades de terceros para su posterior análisis.
+
+> Identity Protection clasifica el riesgo en tres niveles: bajo, medio y alto. También puede calcular el riesgo de inicios de sesión y el riesgo de identidades del usuario.
+
+Un riesgo de inicio de sesión representa la probabilidad de que el propietario de la identidad no haya autorizado una solicitud de autenticación determinada. El riesgo de inicio de sesión se puede calcular en tiempo real o sin conexión, usando orígenes de inteligencia sobre amenazas internos y externos de Microsoft.
+
+### 🟥 Riesgos.
+
+#### Inicio de Sesion
+
+- **Dirección IP anónima.** Indica un inicio de sesión desde una dirección IP anónima, por ejemplo, *el explorador Tor o redes VPN anónimas.*
+
+- **Viajes atípicos.** Identifica dos inicios de sesión procedentes de ubicaciones _geográficamente distantes_, donde al menos una de las ubicaciones puede también ser inusual para el usuario, según su comportamiento anterior.
+
+- **Dirección IP vinculada a malware.**Este indica inicios de sesión desde direcciones IP infectadas con malware, que se sabe que se comunican activamente con un servidor bot.
+
+- **Propiedades de inicio de sesión desconocidas.** Este tiene en cuenta el historial de inicio de sesión anterior para determinar inicios de sesión anómalos._ El sistema almacena información sobre las ubicaciones anteriores que ha utilizado un usuario y considera que estas ubicaciones "conocidas"_. La detección de riesgos se desencadena cuando el inicio de sesión se produce desde una ubicación que no está en la lista de ubicaciones conocidas.
+
+- **Difusión de contraseña.** Esta detección de riesgo se desencadena cuando se realiza un ataque de difusión de contraseñas.
+
+- **Inteligencia sobre amenazas de Azure AD.** Indica una actividad de inicio de sesión poco común para el usuario en cuestión o que es coherente con patrones de ataque conocidos basados en orígenes de inteligencia sobre amenazas internas y externas de Microsoft.
+
+#### Usario.
+
+Un riesgo de usuario representa la probabilidad de que una identidad o cuenta determinada esté en peligro. Los riesgos se calculan sin conexión, usando orígenes de inteligencia sobre amenazas internos y externos de Microsoft. 
+
+AD idnetity Protecticon puede identificar:
+
+* **Filtración de credenciales**. Este tipo de detección de riesgo indica que se han filtrado las credenciales válidas del usuario. Cuando los cibercriminales llegan a poner en peligro las contraseñas válidas de usuarios legítimos, es frecuente que las compartan. Normalmente lo hacen publicándolas en la Web oscura, los sitios de pegado, o bien mediante el intercambio o la venta de esas credenciales en el mercado negro. Cuando el servicio de credenciales filtradas de Microsoft adquiere las credenciales de usuario de la Web oscura, los sitios de pegado u otros orígenes, se comparan con las credenciales válidas actuales de los usuarios de Azure AD para encontrar coincidencias válidas.
+
+* **Inteligencia sobre amenazas de Azure AD.** Este tipo de detección de riesgo indica una actividad de usuario poco común para el usuario en cuestión o coherente con patrones de ataque conocidos basados en orígenes de inteligencia sobre amenazas internas y externas de Microsoft.
+
+> *Identity Protection solo genera detecciones de riesgos cuando se usan las credenciales correctas en la solicitud de autenticación. Si un usuario usa credenciales incorrectas, no se marcará con Identity Protection, ya que no hay un riesgo de que las credenciales se pongan en peligro a menos que un infiltrado use las credenciales correctas. Luego, las detecciones de riesgos pueden desencadenar acciones como solicitar que los usuarios proporcionen autenticación multifactor, restablezcan su contraseña o bloqueen el acceso hasta que un administrador tome medidas.*

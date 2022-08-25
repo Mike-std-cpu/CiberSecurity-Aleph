@@ -115,3 +115,43 @@ Las VNets proporcionan una contención a nivel de red de los recursos sin que se
 ![vnet](https://docs.microsoft.com/es-es/learn/wwl-sci/describe-basic-security-capabilities-azure/media/azure-virtual-networks.png)
 
 > Azure VNet permite a las organizaciones **segmentar su red.** Las organizaciones pueden crear varias VNets por región y por suscripción, y se pueden crear varias redes más pequeñas (subredes) dentro de cada VNet.
+
+---
+
+## Grupos de seguridad de red de Azure.
+
+Los grupos de seguridad de red (NSG) permiten filtrar el tráfico de red hacia y desde los recursos de Azure en una red virtual de Azure; por ejemplo, una máquina virtual. Un NSG consta de reglas que definen cómo se filtra el tráfico. Solo puede asociar un grupo de seguridad de red a cada subred e interfaz de red de la red virtual en una máquina virtual. Sin embargo, el mismo grupo de seguridad de red se puede asociar a tantas subredes e interfaces de red distintas como elija.
+
+![subred](https://docs.microsoft.com/es-es/learn/wwl-sci/describe-basic-security-capabilities-azure/media/2-virtual-network.png)
+
+En el diagrama muy simplificado que se muestra a continuación, puede ver una red virtual de Azure con dos subredes que están conectadas a Internet, y cada subred tiene una máquina virtual. La subred 1 tiene un NSG asignado que filtra el acceso entrante y saliente a VM1, que necesita un mayor nivel de acceso. En cambio, VM2 podría representar una máquina de acceso público que no requiere un NSG.
+
+### Reglas de seguridad de E/S.
+
+**Un NSG se compone de reglas de seguridad de entrada y salida.** Las reglas de seguridad del NSG se evalúan por prioridad con cinco elementos de información: **origen, puerto de origen, destino, puerto de destino y protocolo, para permitir o denegar el tráfico.** De manera predeterminada, Azure crea una serie de reglas, tres reglas de entrada y tres de salida, para proporcionar un nivel de línea de base de seguridad. No puede quitar las reglas predeterminadas, pero puede invalidarlas si crea otras con prioridades más altas.
+
+Cada regla especifica una o varias de las siguientes propiedades:
+
+1. Nombre: Cada regla de NSG debe tener un nombre único que describa su propósito. Por ejemplo, FiltroSoloAccesoAdmin.
+
+2. Prioridad: las reglas se procesan en orden de prioridad, donde los números más bajos se procesan antes que los números más altos. Cuando el tráfico coincide con una regla, el procesamiento se detiene. Esto significa que no se procesarán otras reglas con una prioridad más baja (números mayores).
+
+3. Origen o destino: especifique una dirección IP individual o un intervalo de direcciones IP, una etiqueta de servicio (un grupo de prefijos de dirección IP de un servicio de Azure determinado) o un grupo de seguridad de aplicaciones. La especificación de un intervalo, una etiqueta de servicio o grupo de seguridad de aplicaciones le permite crear menos reglas de seguridad.
+
+4. Protocolo: Qué protocolo de red comprobará la regla. El protocolo puede ser cualquiera de los siguientes: TCP, UDP, ICMP o Any.
+
+5. Dirección: Indica si la regla debe aplicarse al tráfico entrante o saliente.
+
+6. Intervalo de puertos: Puede especificar un puerto individual o un intervalo de puertos. La especificación de intervalos permite ser más eficaz al crear reglas de seguridad.
+
+7. Acción: Por último, debe decidir qué ocurrirá cuando se desencadene esta regla.
+
+## Diferencias entre grupos de red (NSG) y Azure Firewall.
+
+_Ahora que ha obtenido información sobre los grupos de seguridad de red y Azure Firewall, es posible que se pregunte en qué difieren, ya que ambos protegen los recursos de red virtual._
+
+* El servicio Azure Firewall complementa la funcionalidad de grupo de seguridad de red. Juntos proporcionan una mejor seguridad de red de "defensa en profundidad". 
+
+* Los grupos de seguridad de red proporcionan filtrado de tráfico distribuido de nivel de red para limitar el tráfico a los recursos dentro de las redes virtuales de cada suscripción. 
+
+> Azure Firewall es un firewall de red como servicio con estado y centralizado, que proporciona protección de nivel de red y de aplicación entre las diferentes suscripciones y redes virtuales._

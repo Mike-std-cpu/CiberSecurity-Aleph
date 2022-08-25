@@ -184,3 +184,31 @@ Azure Bastion es un nuevo servicio PaaS totalmente administrado por la plataform
 * Protección en un solo lugar frente a explotaciones de vulnerabilidades de día cero: Azure Bastion es un servicio PaaS totalmente administrado de plataforma. Dado que se encuentra en el perímetro de la red virtual, no es necesario preocuparse por proteger cada máquina virtual de la red virtual. La plataforma de Azure protege contra ataques de día cero manteniendo automáticamente el servicio Azure Bastion protegido y siempre actualizado.
 
 ---
+
+## ¿Como azure cifra los datos?
+
+Microsoft Azure proporciona muchas maneras diferentes de proteger los datos, cada una de ellas depende del servicio o el uso que se requiera.
+
+* **Azure Storage Service Encryption.**
+
+Ayuda a proteger los datos en reposo al cifrarlos automáticamente antes de almacenarlos en discos administrados de Azure, Azure Blob Storage, Azure Files o Azure Queue Storage, y descifrarlos antes de recuperarlos.
+
+* **Azure Disk Encryption**
+
+Ayuda a cifrar discos de las máquinas virtuales de IaaS con Windows y Linux. Azure Disk Encryption usa la característica estándar del sector BitLocker de Windows y la característica dm-crypt de Linux para ofrecer cifrado de volumen para los discos de datos y del sistema operativo.
+
+* **El cifrado de datos transparente (TDE)**
+
+Ayuda a proteger Azure SQL Database y Azure Data Warehouse frente a la amenaza de actividad malintencionada. También realiza cifrado y descifrado de la base de datos en tiempo real, copias de seguridad asociadas y archivos de registro de transacciones en reposo sin necesidad de efectuar cambios en la aplicación.
+
+### Azure Key Vault.
+
+**Azure Key Vault es un servicio centralizado en la nube para almacenar secretos de aplicación.** _Key Vault ayuda a controlar los secretos de la aplicación al mantenerlos en una sola ubicación centralizada y al proporcionar funcionalidades de acceso seguro, control de permisos y registro de acceso. Es útil para diferentes tipos de escenarios:_
+
+* **Administración de secretos.** Puede usar Key Vault para almacenar de forma segura y controlar de manera estricta el acceso a tokens, contraseñas, certificados, claves de interfaz de programación de aplicaciones (API) y otros secretos.
+
+* Administración de claves. Puede usar Key Vault como solución de administración de claves. Key Vault facilita la creación y el control de las claves de cifrado usadas para cifrar los datos.
+
+* **Administración de certificados.** Key Vault permite aprovisionar, administrar e implementar certificados públicos y privados de Capa de sockets seguros y de Seguridad de la capa de transporte (SSL/TLS) para los recursos de Azure y los recursos conectados internamente, con más facilidad.
+
+**Almacenamiento de secretos respaldados por módulos de seguridad de hardware (HSM).** Las claves y los secretos se pueden proteger mediante software, o bien con dispositivos HSM validados por FIPS 140-2 nivel 2.

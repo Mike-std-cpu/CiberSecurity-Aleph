@@ -76,3 +76,12 @@ Con Azure Firewall **puede escalar el uso verticalmente para acoger los flujos d
 
 ---
 
+## Web Application Firewall.
+
+Como ya temnemos conocimiento, en la actualidad los sitios web son las que mas ciber ataques tienen malintencionados que aprovechan vulnerabilidades habitualmente conocidas. _Evitar dichos ataques en el código de la aplicación es todo un desafío. Puede requerir un mantenimiento riguroso, revisión y supervisión._El firewall de aplicaciones web (WAF) ofrece una protección centralizada de las aplicaciones web contra las vulnerabilidades de seguridad más habituales.
+
+![azurefire](https://docs.microsoft.com/es-es/learn/wwl-sci/describe-basic-security-capabilities-azure/media/2-web-app-firewall.png)
+
+Un WAF centralizado ayuda a simplificar la administración de la seguridad, mejora el tiempo de respuesta ante una amenaza de seguridad y permite aplicar revisiones a una vulnerabilidad conocida en un lugar, en lugar de proteger cada aplicación web individual. Un WAF también proporciona a los administradores de la aplicación a un mejor control de la protección contra amenazas e intrusiones.
+
+---

@@ -48,3 +48,31 @@ DDoS Protection Estándar es fácil de habilitar y no requiere ningún cambio en
 
 ---
 
+## 🧱 Azure Firewall.
+
+**Azure Firewall** es un servicio de seguridad de red administrado y basado en la nube que protege los recursos de redes virtuales (VNet) de Azure frente a los atacantes. **Puede implementar Azure Firewall en cualquier red virtual,** pero el mejor enfoque es usarlo en una red virtual centralizada. Todas las demás redes virtuales y locales se enrutarán a través de ella. La ventaja de este modelo es la capacidad de ejercer de forma centralizada el control del tráfico de red para todas las redes virtuales en diferentes suscripciones.
+
+> Un firewall es un dispositivo de seguridad de la red que monitorea el tráfico de red —entrante y saliente— y decide si permite o bloquea tráfico específico en función de un conjunto definido de reglas de seguridad.
+
+![firewall](https://erestecno.com/wp-content/uploads/2019/10/Firewall-inamsay-1468x734-1024x512.jpg)
+
+Con Azure Firewall **puede escalar el uso verticalmente para acoger los flujos de tráfico de red cambiantes,** por lo que no es necesario elaborar un presupuesto para los picos de tráfico. El tráfico de red está sujeto a las reglas de firewall configuradas cuando se enruta al firewall, como la puerta de enlace predeterminada de la subred.
+
+![fwall](https://docs.microsoft.com/es-es/learn/wwl-sci/describe-basic-security-capabilities-azure/media/2-azure-firewall.png)
+
+### Caracteristicas.
+
+1. **Alta disponibilidad y zonas de disponibilidad integradas:** _La alta disponibilidad está integrada, por lo que no hay nada que configurar._ Además, Azure Firewall se puede configurar para abarcar varias zonas de disponibilidad y aumentar la disponibilidad.
+
+2. **Filtrado a nivel de aplicación y de red:** Use la dirección IP, el puerto y el protocolo para admitir el filtrado de nombres de dominio completo para el tráfico HTTP(s) saliente y los controles de filtrado de red.
+
+3. **SNAT de salida y DNAT de entrada para comunicación con recursos de Internet:** _traduce la dirección IP privada de los recursos de red a una dirección IP pública de Azure (traducción de direcciones de red de origen, SNAT) para identificar y permitir el tráfico procedente de la red virtual a destinos de Internet._ Del mismo modo, el tráfico entrante de Internet a la dirección IP pública del firewall se traduce (traducción de direcciones de red de destino o DNAT) y se filtra a las direcciones IP privadas de los recursos de la red virtual.
+
+4. **Varias direcciones IP públicas:** Estas direcciones se pueden asociar a Azure Firewall.
+
+5. **Inteligencia sobre amenazas:** El filtrado basado en inteligencia sobre amenazas puede habilitarse para que **el firewall alerte y deniegue el tráfico desde y hacia los dominios y las direcciones IP malintencionados conocidos.**
+
+6. **Integración en Azure Monitor:** Se integra en Azure Monitor para habilitar la recopilación, el análisis y la acción en función de la telemetría de los registros de Azure Firewall.
+
+---
+

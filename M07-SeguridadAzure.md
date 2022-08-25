@@ -85,3 +85,33 @@ Como ya temnemos conocimiento, en la actualidad los sitios web son las que mas c
 Un WAF centralizado ayuda a simplificar la administración de la seguridad, mejora el tiempo de respuesta ante una amenaza de seguridad y permite aplicar revisiones a una vulnerabilidad conocida en un lugar, en lugar de proteger cada aplicación web individual. Un WAF también proporciona a los administradores de la aplicación a un mejor control de la protección contra amenazas e intrusiones.
 
 ---
+
+## Segmentacion de red.
+
+**La segmentación consiste en dividir algo en partes más pequeñas.** Una organización, por ejemplo, suele estar formada por grupos empresariales más pequeños, como recursos humanos, ventas, atención al cliente, etc. En una oficina, es habitual que cada grupo empresarial tenga su propio espacio de oficina, mientras que los miembros del mismo grupo comparten una oficina. Esto permite que los miembros de un mismo grupo empresarial colaboren, al tiempo que se mantiene la separación de otros grupos para atender los requisitos de confidencialidad de cada empresa.
+
+![segm](https://eontd.com/wp-content/uploads/2020/10/Segmentacion-de-Red-EON-1024x277.png)
+
+> La segmentación de la red puede asegurar las interacciones entre los perímetros. Este enfoque puede reforzar la postura de seguridad de una organización, contener los riesgos en caso de infracción y evitar que los atacantes accedan a toda la carga de trabajo.
+
+El mismo concepto se aplica a las redes informáticas de las empresas. Estas son las principales razones de la segmentación:
+
+- La capacidad de agrupar recursos relacionados que forman parte de las operaciones de la carga de trabajo (o que la hacen posible).
+
+- Aislamiento de recursos.
+
+- Directivas de gobernanza establecidas por la organización.
+
+> La segmentación de la red también es compatible con el modelo de Confianza cero y con un enfoque de seguridad por capas que forma parte de una estrategia de defensa en profundidad.
+
+>**Asumir la vulneración es un principio del modelo de Confianza Cero, por lo que la capacidad de contener a un atacante es vital para proteger los sistemas de información. Cuando las cargas de trabajo (o partes de una carga de trabajo determinada) se colocan en segmentos separados, se puede controlar el tráfico desde y hacia esos segmentos para asegurar las vías de comunicación. Si un segmento se ve comprometido, podrá contener mejor el impacto y evitar que se extienda lateralmente por el resto de su red.**
+
+### Azure Vital Network.
+
+*Azure Virtual Network (VNet) es la pieza clave para la red privada de su organización en Azure. VNet es similar a una red tradicional que funcionaría en su propio centro de datos, pero aporta las ventajas adicionales de la infraestructura de Azure, como la escala, la disponibilidad y el aislamiento.*
+
+Las VNets proporcionan una contención a nivel de red de los recursos sin que se permita el tráfico a través de las VNets o de entrada a la VNet, de forma predeterminada. La comunicación tiene que ser aprovisionada de forma explícita. Esto permite un mayor control sobre la forma en que los recursos de Azure en una VNet se comunican con otros recursos de Azure, Internet y las redes locales.
+
+![vnet](https://docs.microsoft.com/es-es/learn/wwl-sci/describe-basic-security-capabilities-azure/media/azure-virtual-networks.png)
+
+> Azure VNet permite a las organizaciones **segmentar su red.** Las organizaciones pueden crear varias VNets por región y por suscripción, y se pueden crear varias redes más pequeñas (subredes) dentro de cada VNet.

@@ -155,3 +155,32 @@ _Ahora que ha obtenido información sobre los grupos de seguridad de red y Azure
 * Los grupos de seguridad de red proporcionan filtrado de tráfico distribuido de nivel de red para limitar el tráfico a los recursos dentro de las redes virtuales de cada suscripción. 
 
 > Azure Firewall es un firewall de red como servicio con estado y centralizado, que proporciona protección de nivel de red y de aplicación entre las diferentes suscripciones y redes virtuales._
+
+---
+
+## Accesos JIT y Azure Bastion.
+
+Supongamos que ha configurado varias redes virtuales que usan una combinación de NSG e instancias de Azure Firewall para proteger y filtrar el acceso a los recursos, incluidas las máquinas virtuales (VM). Ahora está protegido contra amenazas externas, pero debe permitir a los desarrolladores y científicos de datos, que trabajan de forma remota, acceso directo a esas VM.
+
+### Azure Bastion.
+
+**Azure Bastion es un servicio que se implementa que le permite conectarse a una máquina virtual mediante el explorador y Azure Portal.**
+Azure Bastion es un nuevo servicio PaaS totalmente administrado por la plataforma que se aprovisiona en las redes virtuales. _Azure Bastion proporciona conectividad RDP y SSH segura e ininterrumpida a las máquinas virtuales, directamente desde Azure Portal mediante la Seguridad de la capa de transporte (TLS). Cuando se conecta a través de Azure Bastion, las máquinas virtuales no necesitan una dirección IP pública, un agente ni software cliente especial._
+
+![ABastion](https://docs.microsoft.com/es-es/learn/wwl-sci/describe-basic-security-capabilities-azure/media/2-azure-bastion.png)
+
+#### Caracteristicas
+
+* RDP y SSH directamente en Azure Portal: Puede ir a la sesión RDP y SSH en Azure Portal con una experiencia de un solo clic.
+
+* Sesión remota a través de TLS y cruce de firewall para RDP/SSH: desde Azure Portal, una conexión a la máquina virtual, abrirá un cliente web basado en HTML5 que se transmite automáticamente al dispositivo local. Obtendrá el Protocolo de escritorio remoto (RDP) y Secure Shell (SSH) para atravesar los firewalls corporativos de forma segura. La conexión se realiza de forma segura mediante el protocolo Seguridad de la capa de transporte (TLS) para establecer el cifrado.
+
+* No se requiere ninguna dirección IP pública en la VM de Azure: Azure Bastion abre la conexión RDP/SSH a la máquina virtual de Azure con la dirección IP privada en la VM. No necesita una IP pública.
+
+* No hay problemas de administración de los NSG: Un servicio PaaS de Azure de plataforma totalmente administrada que se refuerza internamente para proporcionar una conexión RDP/SSH segura. No es necesario que aplique ningún NSG en una subred de Azure Bastion.
+
+* Protección frente al examen de puertos: Ya no es necesario exponer las máquinas virtuales a Internet, las VM están protegidas contra la exploración de puertos por parte de usuarios malintencionados o no autorizados que se encuentran fuera de la red virtual.
+
+* Protección en un solo lugar frente a explotaciones de vulnerabilidades de día cero: Azure Bastion es un servicio PaaS totalmente administrado de plataforma. Dado que se encuentra en el perímetro de la red virtual, no es necesario preocuparse por proteger cada máquina virtual de la red virtual. La plataforma de Azure protege contra ataques de día cero manteniendo automáticamente el servicio Azure Bastion protegido y siempre actualizado.
+
+---

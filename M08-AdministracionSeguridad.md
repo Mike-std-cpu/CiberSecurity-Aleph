@@ -50,9 +50,13 @@ Microsoft Defender for Cloud rellena tres necesidades vitales a medida que admin
 
 1. Evaluación continua: conozca su posición de seguridad, identifique y realice un seguimiento de las vulnerabilidades.
 
+> ¿Como esta nuestra segruidad? - ¿Como podremos mejorarla? - _Ir evaluando las correcciones de evalaucion continia._
+
 2. Seguridad: proteja todos los recursos y servicios conectados.
 
 3. Defender: detecte y resuelva las amenazas a recursos, cargas de trabajo y servicios.
+
+> Defender de forma automatica, se detecta y se erradica.
 
 > Las características de Microsoft Defender for Cloud, que cumplen estos requisitos, cubren dos grandes pilares de la seguridad en la nube: 
 > * Administración de la posición de seguridad en la nube.
@@ -75,7 +79,7 @@ Microsoft Defender for Cloud, las caracteristicas de administracion de posición
 
 ![Recom](https://docs.microsoft.com/es-mx/learn/wwl-sci/describe-security-management-capabilities-of-azure/media/3-security-center-recommendations.png)
 
-### Proteccion de cargas de trabajo en la nube.
+### Proteccion de cargas de trabajo en la nube | CWP.
 
 Microsoft Defender for Cloud puede detectar y resolver amenazas a recursos, cargas de trabajo y servicios. Las protecciones de las cargas de trabajo en la nube se entregan mediante planes integrados de Microsoft Defender, específicos de los tipos de recursos de las suscripciones y proporcionan características de seguridad mejorada para las cargas de trabajo.
 
@@ -97,7 +101,7 @@ Microsoft Defender for Cloud puede detectar y resolver amenazas a recursos, carg
 
 * Las protecciones de las cargas de trabajo en la nube se entregan mediante planes integrados de Microsoft Defender, específicos de los tipos de recursos de las suscripciones y proporcionan características de seguridad mejorada para las cargas de trabajo.
 
-### Tipos de subscripciones.
+### Tipos de Planes.
 
 * Microsoft Defender para servidores agrega la detección de amenazas y defensas avanzadas para las máquinas Windows y Linux.
 
@@ -125,7 +129,7 @@ Microsoft Defender for Cloud puede detectar y resolver amenazas a recursos, carg
 
 * Microsoft Defender para las protecciones relacionales de código abierto ofrece protección contra amenazas para bases de datos relacionales de código abierto.
 
-## Caracteristicas de segruidad mejorada.
+## Caracteristicas de seguruidad mejorada (plan) .
 
 - Detección y respuesta de puntos de conexión completa: **Microsoft Defender para servidores** incluye Microsoft Defender para punto de conexión para una detección y respuesta de puntos de conexión (EDR) completa.
 

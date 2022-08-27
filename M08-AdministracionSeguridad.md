@@ -78,3 +78,65 @@ Microsoft Defender for Cloud, las caracteristicas de administracion de posición
 ### Proteccion de cargas de trabajo en la nube.
 
 Microsoft Defender for Cloud puede detectar y resolver amenazas a recursos, cargas de trabajo y servicios. Las protecciones de las cargas de trabajo en la nube se entregan mediante planes integrados de Microsoft Defender, específicos de los tipos de recursos de las suscripciones y proporcionan características de seguridad mejorada para las cargas de trabajo.
+
+---
+
+## Seguridad mejorada de Microsoft Defender for Cloud.
+
+### Version gratis.
+
+* Habilitada en todas las subscripciones de azure.
+
+* **Puntuación segura y sus características relacionadas:** la directiva de seguridad, la evaluación de seguridad continua y las recomendaciones de seguridad prácticas para que pueda proteger los recursos de Azure.
+
+### Version Mejorada.
+
+* Ampliacion de mejoras a comparacion de modo gratuito.
+
+* Proporciona una administración de seguridad unificada y protección contra amenazas en todas las cargas de trabajo.
+
+* Las protecciones de las cargas de trabajo en la nube se entregan mediante planes integrados de Microsoft Defender, específicos de los tipos de recursos de las suscripciones y proporcionan características de seguridad mejorada para las cargas de trabajo.
+
+### Tipos de subscripciones.
+
+* Microsoft Defender para servidores agrega la detección de amenazas y defensas avanzadas para las máquinas Windows y Linux.
+
+* Microsoft Defender para App Service identifica ataques dirigidos a aplicaciones que se ejecutan mediante App Service.
+
+* Microsoft Defender para Storage detecta actividad potencialmente dañina en las cuentas de Azure Storage.
+
+* Microsoft Defender para SQL protege las bases de datos y sus datos dondequiera que se encuentran.
+
+* Microsoft Defender para Kubernetes proporciona protección del entorno de seguridad de Kubernetes nativa de nube, protección de cargas de trabajo y protección en tiempo de ejecución.
+
+> _Kubernetes es una plataforma portable y extensible de código abierto para administrar cargas de trabajo y servicios. Kubernetes facilita la automatización y la configuración declarativa. Tiene un ecosistema grande y en rápido crecimiento. Podemos declarar que una kibernet es:_
+
+> * una plataforma de contenedores.
+> * una plataforma de microservicios.
+> * una plataforma portable de nube.
+
+* Microsoft Defender para registros de contenedor protege todos los registros basados en Azure Resource Manager de su suscripción.
+
+* Microsoft Defender para Key Vault es una protección contra amenazas avanzada para Azure Key Vault.
+
+* Microsoft Defender para Resource Manager supervisa automáticamente las operaciones de administración de recursos en la organización.
+
+* Microsoft Defender para DNS proporciona una capa adicional de protección para los recursos que usan la funcionalidad de resolución de nombres proporcionada por Azure de Azure DNS.
+
+* Microsoft Defender para las protecciones relacionales de código abierto ofrece protección contra amenazas para bases de datos relacionales de código abierto.
+
+## Caracteristicas de segruidad mejorada.
+
+- Detección y respuesta de puntos de conexión completa: **Microsoft Defender para servidores** incluye Microsoft Defender para punto de conexión para una detección y respuesta de puntos de conexión (EDR) completa.
+
+- Examen de vulnerabilidades para máquinas virtuales, registros de contenedor y recursos SQL: implemente fácilmente un analizador en todas las máquinas virtuales. Vea, investigue y corrija los resultados directamente en Microsoft Defender for Cloud.
+
+- Seguridad en varias nubes: conecte las cuentas de Amazon Web Services (AWS) y Google Cloud Platform (GCP) para proteger los recursos y cargas de trabajo de esas plataformas con una variedad de características de seguridad de Microsoft Defender for Cloud.
+
+- Seguridad híbrida: Obtenga una vista unificada de la seguridad de todas sus cargas de trabajo locales y en la nube. Aplique directivas de seguridad y evalúe constantemente la seguridad de las cargas de trabajo de nube híbrida para garantizar el cumplimiento normativo con los estándares de seguridad. Recopile, busque y analice datos de seguridad de varios orígenes, incluidos firewalls y otras soluciones de partners.
+
+- Alertas de protección contra amenazas: supervise las redes, las máquinas y los servicios en la nube para detectar ataques entrantes y actividad posterior a una infracción de seguridad. Optimice la investigación con herramientas interactivas e inteligencia de amenazas contextual.
+
+- Seguimiento del cumplimiento de una serie de estándares: Microsoft Defender for Cloud evalúa continuamente el entorno de nube híbrida para analizar los factores de riesgo de acuerdo con los controles y procedimientos recomendados de Azure Security Benchmark. Al habilitar las características de seguridad mejoradas, puede aplicar una variedad de otros estándares del sector, estándares normativos y puntos de referencia según las necesidades de la organización. Agregue estándares y realice un seguimiento del cumplimiento con ellos desde el panel de cumplimiento normativo.
+
+- Controles de acceso y aplicación: bloquee el malware y otras aplicaciones no deseadas aplicando recomendaciones basadas en el aprendizaje automático adaptadas a sus cargas de trabajo específicas para crear listas de bloqueos y permisos. Reduzca la superficie de la red que está expuesta a ataques mediante un acceso Just-In-Time controlado a los puertos de administración de las VM de Azure. Los controles de acceso y aplicación reducen drásticamente la exposición a ataques por fuerza bruta y a otros ataques de la red.

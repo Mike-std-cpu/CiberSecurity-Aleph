@@ -28,14 +28,53 @@ Este control o admiinitracion conta de la combinacion de distintas herramientas:
 
 Use CSPM para mejorar la administración de la seguridad en la nube mediante la evaluación del entorno y el envío automático de alertas al personal de seguridad en caso de presentarse vulnerabilidades. Puede funcioinar en:
 
-* Equipo información sobre amenazas
+* Equipo información sobre amenazas.
 
-* Tecnología de la información
+* Tecnología de la información.
 
-* Equipos de administración de riesgos y cumplimiento
+* Equipos de administración de riesgos y cumplimiento.
 
-* Líderes empresariales y expertos en la materia
+* Líderes empresariales y expertos en la materia.
 
-* Arquitectura y operaciones de seguridad
+* Arquitectura y operaciones de seguridad.
 
-Equipo de auditoría
+* Equipo de auditoría.git
+
+---
+
+## Microsoft Defender for Cloud.
+
+_Microsoft Defender for Cloud es una herramienta para la administración de la posición de seguridad y la protección contra amenazas. Esta refuerza la posición de seguridad de los recursos en la nube y, gracias a los planes integrados de Microsoft Defender, Defender for Cloud protege las cargas de trabajo híbridas que se ejecutan en Azure y otras plataformas en la nube._
+
+Microsoft Defender for Cloud rellena tres necesidades vitales a medida que administra la seguridad de los recursos y las cargas de trabajo en la nube y en el entorno local:
+
+1. Evaluación continua: conozca su posición de seguridad, identifique y realice un seguimiento de las vulnerabilidades.
+
+2. Seguridad: proteja todos los recursos y servicios conectados.
+
+3. Defender: detecte y resuelva las amenazas a recursos, cargas de trabajo y servicios.
+
+> Las características de Microsoft Defender for Cloud, que cumplen estos requisitos, cubren dos grandes pilares de la seguridad en la nube: 
+> * Administración de la posición de seguridad en la nube.
+> * Protección de cargas de trabajo en la nube.
+
+### Administracion de la posición de seguridad en la nube.
+
+Microsoft Defender for Cloud, las caracteristicas de administracion de posición:
+
+* Visibilidad.
+* Guia de proteccion para mejora de seguridad de forma eficaz.
+
+#### Recomendaciones
+
+* La característica central de Microsoft Defender for Cloud que le permite lograr esos objetivos es la puntuación segura. Microsoft Defender for Cloud evalúa continuamente los recursos, las suscripciones y la organización en busca de problemas de seguridad.
+
+* Proporciona recomendaciones de protección basadas en los errores de configuración y los puntos débiles de seguridad identificados.
+
+> _Las recomendaciones se agrupan en controles de seguridad. Cada control es un grupo lógico de recomendaciones de seguridad relacionadas y refleja las superficies de ataque vulnerables. La puntuación solo mejora cuando corrige todas las recomendaciones para un solo recurso de un control. Use estas recomendaciones de seguridad para reforzar la posición de seguridad de los recursos híbridos y de varias nubes de Azure de su organización._
+
+![Recom](https://docs.microsoft.com/es-mx/learn/wwl-sci/describe-security-management-capabilities-of-azure/media/3-security-center-recommendations.png)
+
+### Proteccion de cargas de trabajo en la nube.
+
+Microsoft Defender for Cloud puede detectar y resolver amenazas a recursos, cargas de trabajo y servicios. Las protecciones de las cargas de trabajo en la nube se entregan mediante planes integrados de Microsoft Defender, específicos de los tipos de recursos de las suscripciones y proporcionan características de seguridad mejorada para las cargas de trabajo.

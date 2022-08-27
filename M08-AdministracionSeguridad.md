@@ -143,4 +143,30 @@ Microsoft Defender for Cloud puede detectar y resolver amenazas a recursos, carg
 
 - Seguimiento del cumplimiento de una serie de estándares: Microsoft Defender for Cloud evalúa continuamente el entorno de nube híbrida para analizar los factores de riesgo de acuerdo con los controles y procedimientos recomendados de Azure Security Benchmark. Al habilitar las características de seguridad mejoradas, puede aplicar una variedad de otros estándares del sector, estándares normativos y puntos de referencia según las necesidades de la organización. Agregue estándares y realice un seguimiento del cumplimiento con ellos desde el panel de cumplimiento normativo.
 
+> Segun los estandares que nosotros queramos identifiar de nuestra aplicacion, microsoft podra indicar las caracteristicas que se neceistan de la certificacion que se necesite.
+
 - Controles de acceso y aplicación: bloquee el malware y otras aplicaciones no deseadas aplicando recomendaciones basadas en el aprendizaje automático adaptadas a sus cargas de trabajo específicas para crear listas de bloqueos y permisos. Reduzca la superficie de la red que está expuesta a ataques mediante un acceso Just-In-Time controlado a los puertos de administración de las VM de Azure. Los controles de acceso y aplicación reducen drásticamente la exposición a ataques por fuerza bruta y a otros ataques de la red.
+
+> Bloque de malwares para nuestras aplicaciones o VM.
+
+---
+
+## Microsoft Security Benchmark.
+
+Microsoft ha descubierto que el uso de puntos de referencia de seguridad puede ayudar a las organizaciones a proteger rápidamente sus implementaciones en la nube y reducir el riesgo.
+
+La prueba comparativa de seguridad de Azure (ASB) proporciona recomendaciones y procedimientos recomendados para ayudar a mejorar la seguridad de las cargas de trabajo, los datos y los servicios de Azure. 
+
+* Identificador de ASB: cada elemento de línea de ASB tiene un identificador que se asigna a una recomendación específica.
+
+* Dominio de control: los dominios de control de ASB incluyen seguridad de red, protección de datos, administración de identidades, acceso con privilegios, respuesta a incidentes, seguridad de punto de conexión, por nombrar solo algunos. El dominio de control se describe mejor como una característica o actividad general que no es específica de una tecnología o implementación.
+
+* Asignación a marcos del sector: las recomendaciones incluidas en ASB se asignan a marcos del sector existentes, como el Centro de Seguridad de Internet (CIS), el Instituto Nacional de Estándares y Tecnología (NIST), y los marcos de estándares de seguridad de datos del sector de tarjetas de pago (PCI DSS). Esto facilita la seguridad y el cumplimiento para las aplicaciones cliente que se ejecutan en servicios de Azure.
+
+* Recomendación: para cada área de dominio de control puede haber muchas recomendaciones distintas. Cada recomendación captura una funcionalidad específica asociada al área de dominio de control y es un control por si misma. Por ejemplo, el dominio de control "Seguridad de red" de ASB v3 tiene 10 recomendaciones distintas identificadas como NS-1 a NS-10. Cada una de estas recomendaciones describe un control específico bajo la seguridad de red.
+
+* Principio de seguridad: cada recomendación enumera un "principio de seguridad" que explica el "por qué" del control en el nivel independiente de la tecnología.
+
+* Guía de Azure: la guía de Azure se centra en el "cómo", y detalla las características técnicas pertinentes y las formas de implementar los controles en Azure.
+
+> Basicamente, el Microsoft Security Benchmark es una guia de recomendaciones del listado de certifiaciones que debamos de hacer para que nuestra aplicacion tenga esa certificacion, dando recomendaciones y caracteristicas segun lo deseado.
